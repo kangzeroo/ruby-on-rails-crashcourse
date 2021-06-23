@@ -204,5 +204,11 @@ Style/SymbolArray:
 Layout/LineLength:
   Max: 190
 
+Layout/IndentationWidth:
+  Width: 2
+
+Style/WordArray:
+  EnforcedStyle: brackets
+
 AllCops:
   NewCops: enable

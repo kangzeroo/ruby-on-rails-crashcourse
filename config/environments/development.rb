@@ -1,4 +1,4 @@
-require "active_support/core_ext/integer/time"
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -73,4 +73,12 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # Init the logger
+  Rails.logger = Logger.new($stdout)
+  config.logger = ActiveSupport::Logger.new("log/#{Rails.env}.log")
+
+  # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
+  # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
+  config.require_master_key = true
 end
