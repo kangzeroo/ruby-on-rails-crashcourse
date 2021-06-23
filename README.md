@@ -1,6 +1,8 @@
 # Rails Startup Checklist
 
 - check `Gemfile` for `gem 'web-console', '>= 4.1.0'` so that we can use `<% console %>` in `html.erb` files
+- check machine has installed `vim` so that we can edit the encrypted environment based API keys using `EDITOR=vim bin/rails credentials:edit`. see [this tutorial](https://blog.engineyard.com/rails-encrypted-credentials-on-rails-5.2) for full details. or see `app/controllers/application_controller.rb`
+- setup custom logging as seen in `app/controllers/application_controller.rb`
 - check `Gemfile` for `gem 'byebug'` so we can debug in server
 - check `Gemfile` for `gem 'rubocop'` so we can have enforced styling
 - check `.rubocop_todo.yml` and `.prettierrc.json` for syncronized styling. in VSCode, check `settings.json` for the below config:
